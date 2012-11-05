@@ -2008,7 +2008,6 @@ static int selinux_binder_transfer_file(struct task_struct *from, struct task_st
 	if ((rc = security_integrity_current()))
 		return rc;
 
-
 	ad.type = LSM_AUDIT_DATA_PATH;
 	ad.u.path = file->f_path;
 	ad.selinux_audit_data = &sad;
